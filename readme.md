@@ -1,15 +1,10 @@
-this is a tool repository for dality coding
+# this is a tool repository for dality coding
 
-#############
+# #############
 
+# svm
+# sort algorithm
+# kalman filter
+# least_squares
 
-rename.py
-to rename the image in array
-
-
-#############
-
-
-resizepic.py
-to resize the image to deep learning
 
