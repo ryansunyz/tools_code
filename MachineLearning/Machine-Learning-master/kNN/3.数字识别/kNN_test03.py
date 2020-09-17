@@ -117,8 +117,10 @@ def handwritingClassTest():
 		#获得测试集的1x1024向量,用于训练
 		vectorUnderTest = img2vector('testDigits/%s' % (fileNameStr))
 		#获得预测结果
-		classifierResult = classify0(vectorUnderTest, trainingMat, hwLabels, 3)
-		print("分类返回结果为%d\t真实结果为%d" % (classifierResult, classNumber))
+		classifierResult = classify0(vectorUnderTest, trainingMat, hwLabels, 2)
+		# print("分类返回结果为%d\t真实结果为%d" % (classifierResult, classNumber))
+		if(classifierResult != classNumber):
+			print("classify error file is: ", fileNameStr)
 		if(classifierResult != classNumber):
 			errorCount += 1.0
 	print("总共错了%d个数据\n错误率为%f%%" % (errorCount, errorCount/mTest))
