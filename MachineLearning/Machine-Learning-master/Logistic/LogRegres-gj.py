@@ -35,40 +35,18 @@ def loadDataSet():
 
 """
 函数说明:sigmoid函数
-
-Parameters:
-	inX - 数据
-Returns:
-	sigmoid函数
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-28
 """
 def sigmoid(inX):
 	return 1.0 / (1 + np.exp(-inX))
 
 """
 函数说明:梯度上升算法
-
 Parameters:
 	dataMatIn - 数据集
 	classLabels - 数据标签
 Returns:
 	weights.getA() - 求得的权重数组(最优参数)
 	weights_array - 每次更新的回归系数
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-28
 """
 def gradAscent(dataMatIn, classLabels):
 	dataMatrix = np.mat(dataMatIn)										#转换成numpy的mat
@@ -96,14 +74,6 @@ Parameters:
 Returns:
 	weights - 求得的回归系数数组(最优参数)
 	weights_array - 每次更新的回归系数
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-31
 """
 def stocGradAscent1(dataMatrix, classLabels, numIter=150):
 	m,n = np.shape(dataMatrix)												#返回dataMatrix的大小。m为行数,n为列数。
@@ -129,14 +99,6 @@ Parameters:
 	weights - 权重参数数组
 Returns:
 	无
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-30
 """
 def plotBestFit(weights):
 	dataMat, labelMat = loadDataSet()									#加载数据集
@@ -179,7 +141,7 @@ Modify:
 """
 def plotWeights(weights_array1,weights_array2):
 	#设置汉字格式
-	font = FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=14)
+	font = FontProperties(fname=r"/System/Library/Fonts/PingFang.ttc", size=14)
 	#将fig画布分隔成1行1列,不共享x轴和y轴,fig画布的大小为(13,8)
 	#当nrow=3,nclos=2时,代表fig画布被分为六个区域,axs[0][0]表示第一行第一列
 	fig, axs = plt.subplots(nrows=3, ncols=2,sharex=False, sharey=False, figsize=(20,10))
@@ -197,7 +159,7 @@ def plotWeights(weights_array1,weights_array2):
 	#绘制w2与迭代次数的关系
 	axs[2][0].plot(x1,weights_array1[:,2])
 	axs2_xlabel_text = axs[2][0].set_xlabel(u'迭代次数',FontProperties=font)
-	axs2_ylabel_text = axs[2][0].set_ylabel(u'W1',FontProperties=font)
+	axs2_ylabel_text = axs[2][0].set_ylabel(u'W2',FontProperties=font)
 	plt.setp(axs2_xlabel_text, size=20, weight='bold', color='black')  
 	plt.setp(axs2_ylabel_text, size=20, weight='bold', color='black') 
 
@@ -216,7 +178,7 @@ def plotWeights(weights_array1,weights_array2):
 	#绘制w2与迭代次数的关系
 	axs[2][1].plot(x2,weights_array2[:,2])
 	axs2_xlabel_text = axs[2][1].set_xlabel(u'迭代次数',FontProperties=font)
-	axs2_ylabel_text = axs[2][1].set_ylabel(u'W1',FontProperties=font)
+	axs2_ylabel_text = axs[2][1].set_ylabel(u'W2',FontProperties=font)
 	plt.setp(axs2_xlabel_text, size=20, weight='bold', color='black')  
 	plt.setp(axs2_ylabel_text, size=20, weight='bold', color='black') 
 
