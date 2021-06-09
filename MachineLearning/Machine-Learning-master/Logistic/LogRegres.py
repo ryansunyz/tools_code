@@ -4,21 +4,7 @@ import numpy as np
 
 """
 函数说明:梯度上升算法测试函数
-
 求函数f(x) = -x^2 + 4x的极大值
-
-Parameters:
-	无
-Returns:
-	无
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-28
 """
 def Gradient_Ascent_test():
 	def f_prime(x_old):									#f(x)的导数
@@ -34,20 +20,6 @@ def Gradient_Ascent_test():
 
 """
 函数说明:加载数据
-
-Parameters:
-	无
-Returns:
-	dataMat - 数据列表
-	labelMat - 标签列表
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-28
 """
 def loadDataSet():
 	dataMat = []														#创建数据列表
@@ -62,19 +34,6 @@ def loadDataSet():
 
 """
 函数说明:sigmoid函数
-
-Parameters:
-	inX - 数据
-Returns:
-	sigmoid函数
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-28
 """
 def sigmoid(inX):
 	return 1.0 / (1 + np.exp(-inX))
@@ -87,14 +46,6 @@ Parameters:
 	classLabels - 数据标签
 Returns:
 	weights.getA() - 求得的权重数组(最优参数)
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-28
 """
 def gradAscent(dataMatIn, classLabels):
 	dataMatrix = np.mat(dataMatIn)										#转换成numpy的mat
@@ -111,19 +62,8 @@ def gradAscent(dataMatIn, classLabels):
 
 """
 函数说明:绘制数据集
-
 Parameters:
 	无
-Returns:
-	无
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-30
 """
 def plotDataSet():
 	dataMat, labelMat = loadDataSet()									#加载数据集
@@ -146,19 +86,10 @@ def plotDataSet():
 
 """
 函数说明:绘制数据集
-
 Parameters:
 	weights - 权重参数数组
 Returns:
 	无
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-30
 """
 def plotBestFit(weights):
 	dataMat, labelMat = loadDataSet()									#加载数据集

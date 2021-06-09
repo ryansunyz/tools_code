@@ -13,14 +13,6 @@ Parameters:
 Returns:
 	dataMat - 数据列表
 	labelMat - 标签列表
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-28
 """
 def loadDataSet():
 	dataMat = []														#创建数据列表
@@ -100,6 +92,7 @@ Parameters:
 Returns:
 	无
 """
+'''
 def plotBestFit(weights):
 	dataMat, labelMat = loadDataSet()									#加载数据集
 	dataArr = np.array(dataMat)											#转换成numpy的array数组
@@ -120,7 +113,8 @@ def plotBestFit(weights):
 	ax.plot(x, y)
 	plt.title('BestFit')												#绘制title
 	plt.xlabel('X1'); plt.ylabel('X2')									#绘制label
-	plt.show()		
+	plt.show()	
+	'''	
 
 """
 函数说明:绘制回归系数与迭代次数的关系
@@ -128,16 +122,6 @@ def plotBestFit(weights):
 Parameters:
 	weights_array1 - 回归系数数组1
 	weights_array2 - 回归系数数组2
-Returns:
-	无
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-30
 """
 def plotWeights(weights_array1,weights_array2):
 	#设置汉字格式
