@@ -1,23 +1,10 @@
 # -*- coding:UTF-8 -*-
-from sklearn.linear_model import LogisticRegression
+# from sklearn.linear_model import LogisticRegression
 import numpy as np
 import random
 
 """
 函数说明:sigmoid函数
-
-Parameters:
-	inX - 数据
-Returns:
-	sigmoid函数
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-09-05
 """
 def sigmoid(inX):
 	return 1.0 / (1 + np.exp(-inX))
@@ -31,14 +18,6 @@ Parameters:
 	numIter - 迭代次数
 Returns:
 	weights - 求得的回归系数数组(最优参数)
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-09-05
 """
 def stocGradAscent1(dataMatrix, classLabels, numIter=150):
 	m,n = np.shape(dataMatrix)												#返回dataMatrix的大小。m为行数,n为列数。
@@ -63,14 +42,6 @@ Parameters:
 	classLabels - 数据标签
 Returns:
 	weights.getA() - 求得的权重数组(最优参数)
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-08-28
 """
 def gradAscent(dataMatIn, classLabels):
 	dataMatrix = np.mat(dataMatIn)										#转换成numpy的mat
@@ -85,8 +56,6 @@ def gradAscent(dataMatIn, classLabels):
 		weights = weights + alpha * dataMatrix.transpose() * error
 	return weights.getA()												#将矩阵转换为数组，并返回
 
-
-
 """
 函数说明:使用Python写的Logistic分类器做预测
 
@@ -94,14 +63,6 @@ Parameters:
 	无
 Returns:
 	无
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-09-05
 """
 def colicTest():
 	frTrain = open('horseColicTraining.txt')										#打开训练集
@@ -135,14 +96,6 @@ Parameters:
 	weights - 回归系数
 Returns:
 	分类结果
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-09-05
 """
 def classifyVector(inX, weights):
     prob = sigmoid(sum(inX*weights))
@@ -156,15 +109,8 @@ Parameters:
 	无
 Returns:
 	无
-Author:
-	Jack Cui
-Blog:
-	http://blog.csdn.net/c406495762
-Zhihu:
-	https://www.zhihu.com/people/Jack--Cui/
-Modify:
-	2017-09-05
 """
+'''
 def colicSklearn():
 	frTrain = open('horseColicTraining.txt')										#打开训练集
 	frTest = open('horseColicTest.txt')												#打开测试集
@@ -187,6 +133,8 @@ def colicSklearn():
 	classifier = LogisticRegression(solver = 'sag',max_iter = 5000).fit(trainingSet, trainingLabels)
 	test_accurcy = classifier.score(testSet, testLabels) * 100
 	print('正确率:%f%%' % test_accurcy)
+	'''
 
 if __name__ == '__main__':
-	colicSklearn()
+	# colicSklearn()
+	colicTest()
