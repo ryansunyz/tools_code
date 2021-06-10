@@ -1,5 +1,5 @@
 # -*- coding:UTF-8 -*-
-# from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression
 import numpy as np
 import random
 
@@ -110,7 +110,7 @@ Parameters:
 Returns:
 	无
 """
-'''
+
 def colicSklearn():
 	frTrain = open('horseColicTraining.txt')										#打开训练集
 	frTest = open('horseColicTest.txt')												#打开测试集
@@ -133,8 +133,8 @@ def colicSklearn():
 	classifier = LogisticRegression(solver = 'sag',max_iter = 5000).fit(trainingSet, trainingLabels)
 	test_accurcy = classifier.score(testSet, testLabels) * 100
 	print('正确率:%f%%' % test_accurcy)
-	'''
+	
 
 if __name__ == '__main__':
-	# colicSklearn()
-	colicTest()
+	colicSklearn()
+	# colicTest()

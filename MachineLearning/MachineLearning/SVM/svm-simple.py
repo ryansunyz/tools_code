@@ -11,14 +11,6 @@ Parameters:
 Returns:
     dataMat - 数据矩阵
     labelMat - 数据标签
-Author:
-    Jack Cui
-Blog:
-    http://blog.csdn.net/c406495762
-Zhihu:
-    https://www.zhihu.com/people/Jack--Cui/
-Modify:
-    2017-09-21
 """
 def loadDataSet(fileName):
 	dataMat = []; labelMat = []
@@ -38,14 +30,6 @@ Parameters:
     m - alpha参数个数
 Returns:
     j - alpha_j的索引值
-Author:
-    Jack Cui
-Blog:
-    http://blog.csdn.net/c406495762
-Zhihu:
-    https://www.zhihu.com/people/Jack--Cui/
-Modify:
-    2017-09-21
 """
 def selectJrand(i, m):
 	j = i                                 #选择一个不等于i的j
@@ -62,14 +46,6 @@ Parameters:
     L - alpha下限
 Returns:
     aj - alpah值
-Author:
-    Jack Cui
-Blog:
-    http://blog.csdn.net/c406495762
-Zhihu:
-    https://www.zhihu.com/people/Jack--Cui/
-Modify:
-    2017-09-21
 """
 def clipAlpha(aj,H,L):
 	if aj > H: 
@@ -86,14 +62,6 @@ Parameters:
     labelMat - 数据标签
 Returns:
     无
-Author:
-    Jack Cui
-Blog:
-    http://blog.csdn.net/c406495762
-Zhihu:
-    https://www.zhihu.com/people/Jack--Cui/
-Modify:
-    2017-09-21
 """
 def showDataSet(dataMat, labelMat):
 	data_plus = []                                  #正样本
@@ -121,14 +89,6 @@ Parameters:
     maxIter - 最大迭代次数
 Returns:
     无
-Author:
-    Jack Cui
-Blog:
-    http://blog.csdn.net/c406495762
-Zhihu:
-    https://www.zhihu.com/people/Jack--Cui/
-Modify:
-    2017-09-23
 """
 def smoSimple(dataMatIn, classLabels, C, toler, maxIter):
 	#转换为numpy的mat存储
@@ -199,14 +159,6 @@ Parameters:
     b - 直线解决
 Returns:
     无
-Author:
-    Jack Cui
-Blog:
-    http://blog.csdn.net/c406495762
-Zhihu:
-    https://www.zhihu.com/people/Jack--Cui/
-Modify:
-    2017-09-23
 """
 def showClassifer(dataMat, w, b):
 	#绘制样本点
@@ -247,14 +199,6 @@ Parameters:
     alphas - alphas值
 Returns:
     无
-Author:
-    Jack Cui
-Blog:
-    http://blog.csdn.net/c406495762
-Zhihu:
-    https://www.zhihu.com/people/Jack--Cui/
-Modify:
-    2017-09-23
 """
 def get_w(dataMat, labelMat, alphas):
     alphas, dataMat, labelMat = np.array(alphas), np.array(dataMat), np.array(labelMat)

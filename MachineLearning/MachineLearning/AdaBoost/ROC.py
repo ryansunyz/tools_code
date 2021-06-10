@@ -126,7 +126,8 @@ def plotROC(predStrengths, classLabels):
 	Returns:
 		无
 	"""
-	font = FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=14)
+	# font = FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=14)
+	font = FontProperties(fname=r"/System/Library/Fonts/PingFang.ttc", size=14)
 	cur = (1.0, 1.0) 														#绘制光标的位置
 	ySum = 0.0 																#用于计算AUC
 	numPosClas = np.sum(np.array(classLabels) == 1.0)						#统计正类的数量
