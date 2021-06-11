@@ -253,7 +253,8 @@ Modify:
 """
 def plotNode(nodeTxt, centerPt, parentPt, nodeType):
 	arrow_args = dict(arrowstyle="<-")											#定义箭头格式
-	font = FontProperties(fname=r"c:\windows\fonts\simsunb.ttf", size=14)		#设置中文字体
+	# font = FontProperties(fname=r"c:\windows\fonts\simsunb.ttf", size=14)		#设置中文字体
+	font = FontProperties(fname=r"/System/Library/Fonts/PingFang.ttc", size=14)
 	createPlot.ax1.annotate(nodeTxt, xy=parentPt,  xycoords='axes fraction',	#绘制结点
 		xytext=centerPt, textcoords='axes fraction',
 		va="center", ha="center", bbox=nodeType, arrowprops=arrow_args, FontProperties=font)
