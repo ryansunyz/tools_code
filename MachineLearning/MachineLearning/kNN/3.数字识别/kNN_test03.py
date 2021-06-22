@@ -123,7 +123,7 @@ def handwritingClassTest():
 			print("classify error file is: ", fileNameStr)
 		if(classifierResult != classNumber):
 			errorCount += 1.0
-	print("总共错了%d个数据\n错误率为%f%%" % (errorCount, errorCount/mTest))
+	print("总共错了%d个数据\n错误率为%f" % (errorCount, errorCount/mTest))
 
 
 """
